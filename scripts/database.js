@@ -34,3 +34,27 @@ const database = {
     { id: 3, size: "Rubbish Bin" }
   ]
 };
+
+export const getProteins = () => {
+  return database.proteins.map(protein => ({...protein}));
+}
+
+export const getVegetables = () => {
+  return database.vegetables.map(vegetable => ({...vegetable}));
+}
+
+export const getCarbs = () => {
+  return database.carbs.map(carb => ({...carb}));
+}
+
+export const getSauces = () => {
+  return database.sauces.map(sauce => ({...sauce}));
+}
+
+export const getSeasonings = () => {
+  return database.seasonings.map(seasoning => ({...seasoning}));
+}
+
+export const getBowlSizes = () => {
+  return database.bowlSizes.map(bowlSize => ({...bowlSize}));
+}
