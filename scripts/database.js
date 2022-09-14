@@ -1,4 +1,5 @@
 const database = {
+  buildOrder: {},
   proteins: [
     { id: 1, name: "Armadillo", price: 5.0, isAnimal: true },
     { id: 2, name: "Panda", price: 7.5, isAnimal: true },
@@ -32,29 +33,51 @@ const database = {
     { id: 1, size: "Bucket" },
     { id: 2, size: "Bread box" },
     { id: 3, size: "Rubbish Bin" }
-  ]
+  ],
+  orders: []
 };
 
 export const getProteins = () => {
-  return database.proteins.map(protein => ({...protein}));
+  return database.proteins.map(protein => ({ ...protein }));
 }
 
 export const getVegetables = () => {
-  return database.vegetables.map(vegetable => ({...vegetable}));
+  return database.vegetables.map(vegetable => ({ ...vegetable }));
 }
 
 export const getCarbs = () => {
-  return database.carbs.map(carb => ({...carb}));
+  return database.carbs.map(carb => ({ ...carb }));
 }
 
 export const getSauces = () => {
-  return database.sauces.map(sauce => ({...sauce}));
+  return database.sauces.map(sauce => ({ ...sauce }));
 }
 
 export const getSeasonings = () => {
-  return database.seasonings.map(seasoning => ({...seasoning}));
+  return database.seasonings.map(seasoning => ({ ...seasoning }));
 }
 
 export const getBowlSizes = () => {
-  return database.bowlSizes.map(bowlSize => ({...bowlSize}));
+  return database.bowlSizes.map(bowlSize => ({ ...bowlSize }));
+}
+
+export const addOrder = () => {
+  // Copy the current state of user choices
+  const newOrder = { ...database.buildOrder }
+
+  // Add a new primary key to the object
+  const lastIndex = database.orders.length - 1
+  newOrder.id = database.orders[lastIndex].id + 1
+
+  // Add a timestamp to the order
+  newOrder.timestamp = Date.now()
+
+  // Add the new order object to custom orders state
+  database.orders.push(newOrder)
+
+  // Reset the temporary state for user choices
+  database.buildOrder = {}
+
+  // Broadcast a notification that permanent state has changed
+  document.dispatchEvent(new CustomEvent("stateChanged"))
 }
