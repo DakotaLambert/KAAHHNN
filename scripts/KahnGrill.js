@@ -1,5 +1,7 @@
 // IMPORT STATEMENTS GO UP HERE
-
+import {listProteins} from "./proteins.js"
+import {listCarbs} from "./Carbs.js"
+import {listVegetables} from "./vegetables.js"
 document.addEventListener(
     "click",
     (event) => {
@@ -16,15 +18,15 @@ export const KahnGrill = () => {
         <article class="choices">
             <section class="choices__proteins options">
                 <h2>Proteins</h2>
-                
+                ${listProteins()}
             </section>
             <section class="choices__vegetables options">
                 <h2>Vegetables</h2>
-                
+                ${listVegetables()}
             </section>
             <section class="choices__carbs options">
                 <h2>Carbs</h2>
-                
+                ${listCarbs()}
             </section>
             <section class="choices__sauces options">
                 <h2>Sauces</h2>
