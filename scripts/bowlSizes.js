@@ -1,6 +1,8 @@
 import { getBowlSizes } from "./database.js"
 
-const bowls = getBowlSizes = () => {
+const bowls = getBowlSizes()
+
+export const listBowlSizes = () => {
     let html = `<ul>`
 
     for (const bowl of bowls) {
