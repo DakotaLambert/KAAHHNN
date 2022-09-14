@@ -1,4 +1,4 @@
-import { getVegtables, setVegtables } from "./database.js"
+import { getVegtables } from "./database.js"
 
 const veggies = getVegtables()
 
