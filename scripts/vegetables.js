@@ -1,6 +1,6 @@
-import { getVegtables, setVegtables } from "./database.js"
+import {getVegetables} from "./database.js"
 
-const veggies = getVegtables()
+const veggies = getVegetables()
 
 // document.addEventListener(
 //     "change",
