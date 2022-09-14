@@ -5,7 +5,7 @@ const bowls = getBowlSizes = () => {
 
     for (const bowl of bowls) {
         html += `<li>
-        <input type="radio" name="bowl" value=${bowl.id}" /> ${bowl.name}
+        <input type="radio" name="bowl" value="${bowl.id}" /> ${bowl.name}
         <li>`
     }
 
