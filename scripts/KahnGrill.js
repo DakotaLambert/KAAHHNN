@@ -1,11 +1,12 @@
 // IMPORT STATEMENTS GO UP HERE
-import {listProteins} from "./proteins.js"
-import {listCarbs} from "./Carbs.js"
-import {listVegetables} from "./vegetables.js"
+import { listProteins } from "./proteins.js"
+import { listCarbs } from "./Carbs.js"
+import { listVegetables } from "./vegetables.js"
+import { listSauces } from "./sauces.js";
 document.addEventListener(
     "click",
     (event) => {
-        if(event.target.id === "orderButton") { 
+        if (event.target.id === "orderButton") {
             addCustomOrder();
         }
     }
@@ -30,7 +31,7 @@ export const KahnGrill = () => {
             </section>
             <section class="choices__sauces options">
                 <h2>Sauces</h2>
-                
+                ${listSauces()}
             </section>
             <section class="choices__seasonings options">
                 <h2>Seasonings</h2>
