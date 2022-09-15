@@ -8,7 +8,7 @@ export const listBowlSizes = () => {
     for (const bowl of bowls) {
         html += `<li>
         <input type="radio" name="bowl" value="${bowl.id}" /> ${bowl.size}
-        <li>`
+        </li>`
     }
 
     html += `</ul>`

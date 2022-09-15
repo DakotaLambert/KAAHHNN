@@ -8,7 +8,7 @@ export const listCarbs = () => {
     for (const carb of carbs) {
         html += `<li>
         <input type="radio" name="carb" value="${carb.id}" /> ${carb.name}
-        <li>`
+        </li>`
     }
 
     html += `</ul>`
