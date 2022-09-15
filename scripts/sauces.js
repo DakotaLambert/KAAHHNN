@@ -1,4 +1,4 @@
-import { getSauces, setSauce } from "./database.js"
+import { getSauces } from "./database.js"
 
 document.addEventListener(
     "change",

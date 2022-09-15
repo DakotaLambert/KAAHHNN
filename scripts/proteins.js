@@ -1,4 +1,4 @@
-import { getProteins, setProtein } from "./database.js"
+import { getProteins } from "./database.js"
 
 const proteins = getProteins()
 

@@ -4,7 +4,7 @@ import { listCarbs } from "./Carbs.js"
 import { listVegetables } from "./vegetables.js"
 import { listBowlSizes } from "./bowlSizes.js";
 import { listSeasonings } from "./seasonings.js";
-
+import {listSauces} from "./sauces.js"
 document.addEventListener(
     "click",
     (event) => {
