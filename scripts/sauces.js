@@ -1,10 +1,10 @@
-import { getSauces, setSauce } from "./database.js"
+import { getSauces, setSauces } from "./database.js"
 
 document.addEventListener(
     "change",
     e => {
         if (e.target.name === "sauce") {
-            setSauce(parseInt(e.target.value))
+            setSauces(parseInt(e.target.value))
         }
     }
 )
