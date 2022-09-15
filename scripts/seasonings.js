@@ -1,15 +1,15 @@
-import { getSeasonings } from "./database.js"
+import { getSeasonings, setSeasonings } from "./database.js"
 
 const Seasonings = getSeasonings()
 
-// document.addEventListener(
-//     "change",
-//     (event) => {
-//         if (event.target.name === "seasoning") {
-//             setSeasonings(parseInt(event.target.value))
-//         }
-//     }
-// )
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.name === "seasoning") {
+            setSeasonings(parseInt(event.target.value))
+        }
+    }
+)
 
 export const listSeasonings = () => {
     let html = "<ul>"

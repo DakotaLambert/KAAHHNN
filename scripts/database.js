@@ -61,6 +61,25 @@ export const getBowlSizes = () => {
   return database.bowlSizes.map(bowlSize => ({ ...bowlSize }));
 }
 
+export const setProteins = (id) => {
+  database.buildOrder.proteinsId = id
+}
+export const setVegetables = (id) => {
+  database.buildOrder.vegetablesId = id
+}
+export const setCarbs = (id) => {
+  database.buildOrder.carbsId = id
+}
+export const setSauces = (id) => {
+  database.buildOrder.saucesId = id
+}
+export const setSeasonings = (id) => {
+  database.buildOrder.seasoningsId = id
+}
+export const setBowlSizes = (id) => {
+  database.buildOrder.bowlSizesId = id
+}
+
 export const addOrder = () => {
   // Copy the current state of user choices
   const newOrder = { ...database.buildOrder }

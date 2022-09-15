@@ -1,4 +1,13 @@
-import { getBowlSizes } from "./database.js"
+import { getBowlSizes, setBowlSizes } from "./database.js"
+
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.name === "bowl") {
+            setBowlSizes(parseInt(event.target.value))
+        }
+    }
+)
 
 const bowls = getBowlSizes()
 
