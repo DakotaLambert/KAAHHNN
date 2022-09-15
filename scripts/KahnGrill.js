@@ -2,7 +2,9 @@
 import { listProteins } from "./proteins.js"
 import { listCarbs } from "./Carbs.js"
 import { listVegetables } from "./vegetables.js"
-import { listSauces } from "./sauces.js";
+import { listBowlSizes } from "./bowlSizes.js";
+import { listSeasonings } from "./seasonings.js";
+
 document.addEventListener(
     "click",
     (event) => {
@@ -35,11 +37,11 @@ export const KahnGrill = () => {
             </section>
             <section class="choices__seasonings options">
                 <h2>Seasonings</h2>
-                
+                ${listSeasonings()}
             </section>
             <section class="choices__bowlSizes options">
                 <h2>Bowl Sizes</h2>
-                
+                ${listBowlSizes()}
             </section>
         </article>
 
