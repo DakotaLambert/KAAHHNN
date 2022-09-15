@@ -1,4 +1,13 @@
-import { getProteins } from "./database.js"
+import { getProteins, setProteins } from "./database.js"
+
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.name === "protein") {
+            setProteins(parseInt(event.target.value))
+        }
+    }
+)
 
 const proteins = getProteins()
 

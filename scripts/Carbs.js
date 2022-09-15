@@ -1,4 +1,13 @@
-import { getCarbs } from "./database.js"
+import { getCarbs, setCarbs } from "./database.js"
+
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.name === "carb") {
+            setCarbs(parseInt(event.target.value))
+        }
+    }
+)
 
 const carbs = getCarbs()
 

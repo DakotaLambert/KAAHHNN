@@ -1,15 +1,15 @@
-import { getVegetables } from "./database.js"
+import { getVegetables, setVegetables } from "./database.js"
 
 const veggies = getVegetables()
 
-// document.addEventListener(
-//     "change",
-//     (event) => {
-//         if (event.target.name === "vegie") {
-//             setVegtables(parseInt(event.target.value))
-//         }
-//     }
-// )
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.name === "vegie") {
+            setVegetables(parseInt(event.target.value))
+        }
+    }
+)
 
 export const listVegetables = () => {
     let html = "<ul>"
